@@ -12,7 +12,6 @@
     d:DesignWidth="300">
     <Grid>
         <dxlc:LayoutGroup Orientation="Vertical">
-
             <TextBlock
                 x:Name="txtCounter"
                 Width="80"

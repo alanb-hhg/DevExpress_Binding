@@ -1,0 +1,48 @@
+﻿<UserControl
+    x:Class="Example.Views.GridView"
+    x:Name="winGridView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="300">
+    <Grid>
+        <dxlc:LayoutGroup Orientation="Vertical">
+
+            <TextBlock
+                x:Name="txtCounter"
+                Width="80"
+                Height="30"
+                Margin="0,10,0,10"
+                VerticalAlignment="Top"
+                Background="Bisque"
+                FontWeight="Bold"
+                Padding="0,5,0,0"
+                Text="{Binding ElementName=winGridView, Path=Counter, StringFormat='Rows: {0}'}"
+                TextAlignment="Center" />
+            <dxg:GridControl x:Name="grid">
+                <dxg:GridControl.Columns>
+                    <dxg:GridColumn FieldName="FirstName" />
+                    <dxg:GridColumn FieldName="LastName" />
+                    <dxg:GridColumn FieldName="Company" />
+                    <dxg:GridColumn FieldName="City" />
+                </dxg:GridControl.Columns>
+                <dxg:GridControl.View>
+                    <dxg:TableView
+                        x:Name="table"
+                        AllowFilterEditor="True"
+                        AutoWidth="True"
+                        PropertyChanged="table_PropertyChanged"
+                        ShowAutoFilterRow="True"
+                        ShowCriteriaInAutoFilterRow="True"
+                        ShowGroupPanel="False"
+                        ShowSearchPanelMode="Always" />
+                </dxg:GridControl.View>
+            </dxg:GridControl>
+        </dxlc:LayoutGroup>
+    </Grid>
+</UserControl>

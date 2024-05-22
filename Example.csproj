@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Contacts.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Contacts.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Images" Version="23.2.6" />
+    <PackageReference Include="devexpress.wpf.controls" Version="23.2.5" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="23.2.6" />
+    <PackageReference Include="DevExpress.Wpf.Docking" Version="23.2.6" />
+    <PackageReference Include="devexpress.wpf.grid.core" Version="23.2.5" />
+    <PackageReference Include="devexpress.wpf.layoutcontrol" Version="23.2.5" />
+    <PackageReference Include="DevExpress.Wpf.ThemesLW" Version="23.2.6" />
+  </ItemGroup>
+
+</Project>
